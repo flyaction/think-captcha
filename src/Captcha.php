@@ -9,12 +9,12 @@
 // | Author: yunwuxin <448901948@qq.com>
 // +----------------------------------------------------------------------
 
-namespace think\captcha;
+namespace flyaction\captcha;
 
 use Exception;
 use think\Config;
 use think\Response;
-use think\Session;
+use think\Cache;
 
 class Captcha
 {

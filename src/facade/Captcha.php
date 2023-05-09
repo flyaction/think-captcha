@@ -1,13 +1,13 @@
 <?php
 
-namespace think\captcha\facade;
+namespace flyaction\captcha\facade;
 
 use think\Facade;
 
 /**
  * Class Captcha
- * @package think\captcha\facade
- * @mixin \think\captcha\Captcha
+ * @package flyaction\captcha\facade
+ * @mixin \flyaction\captcha\Captcha
  */
 class Captcha extends Facade
 {
