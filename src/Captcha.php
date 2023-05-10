@@ -172,9 +172,9 @@ class Captcha
      * @access public
      * @param null|string $config
      * @param bool        $api
-     * @return Response
+     * @return array
      */
-    public function create(string $config = null, bool $api = false)
+    public function create(string $config = null, bool $api = false): array
     {
         $this->configure($config);
 
