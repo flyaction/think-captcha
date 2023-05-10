@@ -178,7 +178,7 @@ class Captcha
     {
         $this->configure($config);
 
-        $generator = $this->generate(string $config = null);
+        $generator = $this->generate($config);
 
         // 图片宽(px)
         $this->imageW || $this->imageW = $this->length * $this->fontSize * 1.5 + $this->length * $this->fontSize / 2;
