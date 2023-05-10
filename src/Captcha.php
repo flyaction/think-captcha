@@ -104,7 +104,7 @@ class Captcha
         $prefix = 'captcha_';
 
         if(!empty($config)){
-            $prefix = $prefix.$config;
+            $prefix = $prefix.$config.'_';
         }
 
         $ckey = $prefix.uniqid();
