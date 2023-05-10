@@ -93,14 +93,21 @@ class Captcha
 
     /**
      * 创建验证码
+     * @param string|null $config
      * @return array
      * @throws Exception
      */
-    protected function generate(): array
+    protected function generate(string $config = null): array
     {
         $bag = '';
 
-        $ckey = uniqid();
+        $prefix = 'captcha_';
+
+        if(!empty($config)){
+            $prefix = $prefix.$config;
+        }
+
+        $ckey = $prefix.uniqid();
 
         if ($this->math) {
             $this->useZh  = false;
@@ -171,7 +178,7 @@ class Captcha
     {
         $this->configure($config);
 
-        $generator = $this->generate();
+        $generator = $this->generate(string $config = null);
 
         // 图片宽(px)
         $this->imageW || $this->imageW = $this->length * $this->fontSize * 1.5 + $this->length * $this->fontSize / 2;
