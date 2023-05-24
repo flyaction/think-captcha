@@ -6,7 +6,7 @@ use think\Route;
 use think\Service;
 use think\Validate;
 
-class CaptchaService extends Service
+class CaptchaPlusService extends Service
 {
     public function boot()
     {
